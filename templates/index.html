@@ -22,8 +22,8 @@
     {% for y in range(config.SIZE) %}
         {% for x in range(config.SIZE) %}
         <a
-            href="/api/toggle/{{ x }}/{{ y }}"
-            class="{% if (x,y) is set %}set{% else %}{% endif %}">
+            href="/api/set?x={{ x }}&y={{ y }}&v={% if (x,y) is set %}0{% else %}1{% endif %}"
+            class="{% if (x,y) is set %}set{% endif %}">
         </a>
         {% endfor %}
         <br>

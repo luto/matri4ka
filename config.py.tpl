@@ -1,3 +1,4 @@
 HOSTNAME = "0.0.0.0"
 POST = 8080
 SIZE = 12
+TOKEN = None
