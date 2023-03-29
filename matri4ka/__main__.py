@@ -46,8 +46,7 @@ class Matri4kaApiServer(BaseHTTPRequestHandler):
             tpl = env.get_template("index.html")
             self.wfile.write(tpl.render(config=config).encode("utf-8"))
 
-        self.finish()
-        self.connection.close()
+        self.close_connection = True
 
 if __name__ == "__main__":
     webServer = HTTPServer((config.HOSTNAME, config.POST), Matri4kaApiServer)
