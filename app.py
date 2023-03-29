@@ -51,7 +51,7 @@ def api_set():
     return redirect(url_for("index"))
 
 
-@app.route("/")
+@app.route("/ui")
 def index():
     return render_template(
         "index.html",
