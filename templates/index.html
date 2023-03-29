@@ -22,7 +22,7 @@
     {% for y in range(config.SIZE) %}
         {% for x in range(config.SIZE) %}
         <a
-            href="/api/set?x={{ x }}&y={{ y }}&v={% if (x,y) is set %}0{% else %}1{% endif %}"
+            href="/ui/set?x={{ x }}&y={{ y }}&v={% if (x,y) is set %}0{% else %}1{% endif %}"
             class="{% if (x,y) is set %}set{% endif %}">
         </a>
         {% endfor %}

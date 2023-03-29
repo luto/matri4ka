@@ -48,6 +48,15 @@ def api_set():
     y = int(request.args["y"])
     v = int(request.args["v"])
     state[x][y] = v
+    return Response("OK", 200)
+
+
+@app.route("/ui/set")
+def api_set():
+    x = int(request.args["x"])
+    y = int(request.args["y"])
+    v = int(request.args["v"])
+    state[x][y] = v
     return redirect(url_for("index"))
 
 
