@@ -52,7 +52,7 @@ def api_set():
 
 
 @app.route("/ui/set")
-def api_set():
+def ui_set():
     x = int(request.args["x"])
     y = int(request.args["y"])
     v = int(request.args["v"])
