@@ -1,0 +1,31 @@
+<style>
+    body {
+        background-color: black;
+        text-align: center;
+    }
+    a {
+        font-style: monospace;
+        text-decoration: none;
+        color: white;
+        height: 40px;
+        width: 40px;
+        margin: 5px;
+        display: inline-block;
+        font-size: 2em;
+        background-color: white;
+    }
+    a.set {
+        background-color: red;
+    }
+</style>
+<body>
+    {% for y in range(config.SIZE) %}
+        {% for x in range(config.SIZE) %}
+        <a
+            href="/api/toggle/{{ x }}/{{ y }}"
+            class="{% if (x,y) is set %}set{% else %}{% endif %}">
+        </a>
+        {% endfor %}
+        <br>
+    {% endfor %}
+</body>
